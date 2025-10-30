@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica</title>
+</head>
+<body>
+    <p><b>Variables y cambios de tipo</b></p>
+    <button  id="1" onclick="funcion_1()">Número</button>
+    <button  id="2" onclick="funcion_2()">Cadena</button>
+    <button  id="3" onclick="funcion_3()">Boolean</button>
+    <button  id="4" onclick="funcion_4()">Null</button>
+    <button  id="5" onclick="funcion_5()">Undefined</button>
+    <button  id="6" onclick="funcion_6()">Conversiones</button>
+    <script>
+        var numero = 53;             // Variable que contiene un valor numérico
+        var string = "Hola";        // Variable que contiene una cadena de carácteres
+        var boolean = true;        // Variable Boolean, puede ser true o false
+        var boolean2 = false;     // Variable Boolean, puede ser true o false
+        var nulo = null;         // Variable vacía, por defecto
+        var Undefined;          // Variable indefinida, puede definirse posteriormente
+        
+
+        function funcion_1(){ //Función creada para ver el tipo de la variable "numero"
+            alert("Comprueba el Log del inspeccionador")
+            console.log("numero:", numero, "tipo:", typeof numero)
+        }
+
+        function funcion_2(){ //Función creada para ver el tipo de a variable "String"
+            alert("Comprueba el Log del inspeccionador")
+            console.log("String:", string, "tipo:", typeof string)
+        }
+
+        function funcion_3(){ //Función creada para ver el tipo de la variable "boolean"
+            alert("Comprueba el Log del inspeccionador")
+            console.log("boolean True:", boolean, "tipo:", typeof boolean)
+            console.log("boolean False:", boolean2, "tipo:", typeof boolean2)  
+        }
+
+        function funcion_4(){ //Función creada para ver el tipo de la variable "nulo"
+            alert("Comprueba el Log del inspeccionador")
+            console.log("nulo:", nulo, "tipo:", typeof nulo) 
+        }
+
+        function funcion_5(){ //Función creada para ver el tipo de la variable "Undefined"
+            alert("Comprueba el Log del inspeccionador")
+            console.log("Undefined:", Undefined, "tipo:", typeof Undefined) 
+        }
+
+        function funcion_6(){ //Función creada para hacer las conversiones de los tipos y mostrarlos en consola
+            alert("Comprueba el Log del inspeccionador")
+            var numToText = String(numero); //Creo estas variables para guardar el nuevo valor de las variables anteriores
+            var textToNum = Number(string);
+            var boolToNum = Number(boolean);
+            var boolToNum2 = Number(boolean2);
+            var boolToText = String(boolean);
+            var boolToText2 = String(boolean2);
+            console.log("Número a cadena: ", numToText, "tipo:", typeof numToText) //53 debería aparecer como un tipo String al inspeccionar el log
+            console.log("Cadena a número: ", textToNum, "tipo:", typeof textToNum) //La variable string debería mostrarse como number, siempre y cuando, tenga valores numéricos, con por ejemplo "hola" dará NaN
+            console.log("Boolean True a número: ", boolToNum, "tipo:", typeof boolToNum) //Boolean debería mostrar 1 siendo true
+            console.log("Boolean False a número: ", boolToNum2, "tipo:", typeof boolToNum2) //Boolean debería mostrar 0 siendo false
+            console.log("Boolean True a cadena: ", boolToText, "tipo:", typeof boolToText) //Boolean debería mostrarse en String
+            console.log("Boolean False a cadena: ", boolToText2, "tipo:", typeof boolToText2) //Boolean debería mostrarse en String
+        }
+        console.log("Esta es la consola")    
+    </script>
+</body>
+</html>

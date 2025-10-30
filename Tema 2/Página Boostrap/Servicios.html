@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css.css">
+    <link rel="icon" type="image/png" href="ruta/a/tu-icono.png">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+        </script>
+    <title>Spades - Servicios</title>
+</head>
+
+<body>
+    <!--NavBar con los diferentes links-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="miNavbar">
+        <!--ID para cambiar el color de fondo con CSS-->
+        <div class="container">
+            <a href="#" class="navbar-brand fw-bold" id="marca"><i class="fas fa-laptop-code me-2"></i>SpadeTech</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a href="index.html" class="nav-link active">Inicio</a></li>
+                    <li class="nav-item"><a href="Servicios.html" class="nav-link active">Servicios</a></li>
+                    <li class="nav-item"><a href="Contacto.html" class="nav-link active">Contacto</a></li>
+                </ul>
+                <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- barra lateral -->
+            <nav class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse" style="margin-top: 56px;"
+                id="miContainer">
+                <div class="position-sticky pt-3">
+                    <h6 class="sidebar-heading text-muted px-3 mt-4 mb-1" id="Navegacion">Navegación</h6>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#"><i class="fas fa-home me-2"></i>Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fas fa-chart-bar me-2"></i>Análisis</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fas fa-users me-2"></i>Clientes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fas fa-cog me-2"></i>Configuración</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- Contenido principal -->
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4" style="margin-top: 56px;">
+                <!-- Sección "Hero", para destacar sobre lo demás -->
+                <section id="inicio" class="hero bg-primary text-white py-5 mb-5 rounded">
+                    <div class="container text-center">
+                        <h1 class="display-4 fw-bold">Servicios de SpadeTech</h1>
+                        <p class="lead">Informática de confianza, sin ruletas</p>
+                    </div>
+                </section>
+
+                <section class="mb-5" id="mb-5">
+                    <h3 id="Progreso">Servicios</h3>
+                    <div class="mb-3" id="mb-3">
+                    </div>
+                </section>
+                <!-- Sección de "cartas", donde podemos poner información en un formato de caja -->
+                <section id="servicios" class="mb-5">
+                    <div class="row">
+                        <div class="col-lg-4 mb-4">
+                            <div class="card h-100 shadow-sm">
+                                <div class="card-header bg-primary text-white text-center" id="miHeader">
+                                    <i class="fas fa-code fa-3x mb-2"></i>
+                                </div>
+                                <div class="card-body" id="cartaMontaje">
+                                    <h5 class="card-title">Montaje de equipos</h5>
+                                    <video autoplay loop controls muted src="Montaje.mp4" class="mx-auto d-block" width="250" height="400">     
+                                </div>
+                                
+                            </div>
+
+                            <div class="dropdown" id="fondoDrop"> <!--Botón de lista desplegable-->
+                                            <button type="button" class="btn btn-primary dropdown-toggle" id="btnEntrar" data-bs-toggle="dropdown">
+                                                Más información
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">Componentes</a></li>
+                                                <li><a class="dropdown-item" href="#">Montajes premontados</a></li>
+                                                <li><a class="dropdown-item" href="#">Portátiles</a></li>
+                                            </ul>
+                                        </div>
+                    
+                        </div>
+                        <div class="col-lg-4 mb-4">
+                            <div class="card h-100 shadow-sm">
+                                <div class="card-header bg-success text-white text-center" id="miHeader2">
+                                    <i class="fas fa-mobile-alt fa-3x mb-2"></i>
+                                </div>
+                                <div class="card-body" id="cartaInfo">
+                                    <h5 class="card-title">Mantenimiento</h5>
+                                    <img src="MONTAMOSTUPC.png" class="card-img-top mx-auto d-block" alt="Folleto" width="250" height="400">
+                                </div>
+                            </div>
+                            <div class="dropdown" id="fondoDrop"> <!--Botón de lista desplegable-->
+                                            <button type="button" class="btn btn-primary dropdown-toggle" id="btnEntrar" data-bs-toggle="dropdown">
+                                                Más información
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">Mantenimiento estándar</a></li>
+                                                <li><a class="dropdown-item" href="#">Mantenimiento a fondo</a></li>
+                                                <li><a class="dropdown-item" href="#">Cambio de chasis y mantenimiento</a></li>
+                                            </ul>
+                                        </div>
+
+                        </div>
+
+                        <div class="col-lg-4 mb-4">
+                            <div class="card h-100 shadow-sm">
+                                <div class="card-header bg-warning text-dark text-center" id="miHeader3">
+                                    <i class="fas fa-cloud fa-3x mb-2"></i>
+                                </div>
+                                <div class="card-body" id="cartaReparaciones">
+                                    <h5 class="card-title">Reparaciones</h5>
+                                    <video autoplay loop controls muted src="Reacondicionado.mp4" class="mx-auto d-block" width="250" height="400">
+                                </div>
+                            </div>
+
+                            <div class="dropdown" id="fondoDrop"> <!--Botón de lista desplegable-->
+                                            <button type="button" class="btn btn-primary dropdown-toggle" id="btnEntrar" data-bs-toggle="dropdown">
+                                                Más información
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">Soldadura de componentes</a></li>
+                                                <li><a class="dropdown-item" href="#">Microsoldadura</a></li>
+                                                <li><a class="dropdown-item" href="#">Reballing</a></li>
+                                            </ul>
+                                        </div>
+
+                        </div>
+                    </div>
+                </section>
+                <!-- Tabla con contenido diverso -->
+                <section class="mb-5">
+                    <h3 id="Soluciones">Precios</h3>
+                    <div class="table-responsive">
+                        <table class="table table-striped table-hover">
+                            <thead class="miTablaHead">
+                                <tr>
+                                    <th>Servicio</th>
+                                    <th>Precio Básico</th>
+                                    <th>Precio Premium</th>
+                                    <th>Tiempo</th>
+                                </tr>
+                            </thead>
+                            <tbody class="miTabla">
+                                <tr class="miTabla">
+                                    <td>Montaje/Mantenimiento</td>
+                                    <td>50€</td>
+                                    <td>90€</td>
+                                    <td>1 - 3 días</td>
+                                </tr>
+                                <tr class="miTabla">
+                                    <td>Reparaciones</td>
+                                    <td>100€</td>
+                                    <td>500€</td>
+                                    <td>1 - 3 semanas</td>
+                                </tr>
+                                <tr class="miTabla">
+                                    <td>Desarrollo Web</td>
+                                    <td>500€</td>
+                                    <td>1500€/hora</td>
+                                    <td>2 - 12 semanas</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <!-- Modal, que permite abrir una pequeña pestaña de "login" -->
+    <div class="modal fade" id="loginModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content" id="fondoModal">
+                <div class="modal-header">
+                    <h5 class="modal-title">Iniciar Sesión</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" id="btnModal"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" id="formBG" placeholder="tu@email.com">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" id="formBG">
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="formBG">
+                            <label class="form-check-label" for="remember">Recordarme</label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" id="btnCancelar"
+                        data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" id="btnEntrar">Entrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Paginación, para navegar entre "más opciones" de esta misma página-->
+    <section>
+            <div id="miPagination"> 
+            <ul class="pagination justify-content-center">
+                <li class="page-item"><a class="page-link" href="#">Previo</a></li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">Siguiente</a></li>
+            </ul>
+        </div>
+        </section>
+    <!-- Footer clásico para poner todo tipo de información de interés al final de la página web -->
+    <footer class="bg-dark text-light py-4 mt-5" id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5><i class="fas fa-laptop-code me-2"></i>SpadeTech</h5>
+                    <p class="text-muted">Tu tienda de componentes y servicio técnico de confianza</p>
+                </div>
+                <div class="col-md-3">
+                    <h6>Enlaces</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-light text-decoration-none">Inicio</a></li>
+                        <li><a href="Servicios.html" class="text-light text-decoration-none">Servicios</a></li>
+                        <li><a href="Servicios.html" class="text-light text-decoration-none">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h6>Síguenos</h6>
+                    <a href="#" class="text-light me-2"><i class="fab fa-facebook fa-lg"></i>Instagram</a>
+                    <a href="#" class="text-light me-2"><i class="fab fa-twitter fa-lg"></i>Youtube</a>
+                    <a href="#" class="text-light me-2"><i class="fab fa-linkedin fa-lg"></i>Linkedin</a>
+                </div>
+            </div>
+            <hr class="my-3">
+            <div class="text-center">
+                <small>&copy; 2025 SpadeTech. Todos los derechos de autor reservados.</small>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css.css">
+    <link rel="icon" type="image/png" href="ruta/a/tu-icono.png">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+        </script>
+    <title>Spades - Contacto</title>
+</head>
+
+<body>
+    <!--NavBar con los diferentes links-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="miNavbar">
+        <!--ID para cambiar el color de fondo con CSS-->
+        <div class="container">
+            <a href="#" class="navbar-brand fw-bold" id="marca"><i class="fas fa-laptop-code me-2"></i>SpadeTech</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a href="index.html" class="nav-link active">Inicio</a></li>
+                    <li class="nav-item"><a href="Servicios.html" class="nav-link active">Servicios</a></li>
+                    <li class="nav-item"><a href="Contacto.html" class="nav-link active">Contacto</a></li>
+                </ul>
+                <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- barra lateral -->
+            <nav class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse" style="margin-top: 56px;"
+                id="miContainer">
+                <div class="position-sticky pt-3">
+                    <h6 class="sidebar-heading text-muted px-3 mt-4 mb-1" id="Navegacion">Navegación</h6>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#"><i class="fas fa-home me-2"></i>Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fas fa-chart-bar me-2"></i>Análisis</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fas fa-users me-2"></i>Clientes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fas fa-cog me-2"></i>Configuración</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- Contenido principal -->
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4" style="margin-top: 56px;">
+                <!-- Sección "Hero", para destacar sobre lo demás -->
+                <section id="inicio" class="hero bg-primary text-white py-5 mb-5 rounded">
+                    <div class="container text-center">
+                        <h1 class="display-4 fw-bold">Contacto a SpadeTech</h1>
+                        <p class="lead">Informática de confianza, sin ruletas</p>
+                    </div>
+                </section>
+                <h3 id="Progreso">Contacto e información de la empresa</h3>
+                <!-- Sección de "cartas", donde podemos poner información en un formato de caja -->
+                <section id="servicios" class="mb-5">
+                    <div class="row">
+                        <div class="col-lg-4 mb-4">
+                            <div class="card h-100 shadow-sm">
+                                <div class="card-header bg-primary text-white text-center" id="miHeader">
+                                    <i class="fas fa-code fa-3x mb-2"></i>
+                                </div>
+                                <div class="card-body" id="cartaMontaje">
+                                    <h5 class="card-title">¡Contacta con nosotros!</h5>
+                                    <p class="card-text">Deja aquí tu mensaje con tu email y te responderemos lo antes
+                                        posible</p>
+                                        <form>
+                                            <div class="mb-3">
+                                            <label class="form-label">Email</label>
+                                            <input type="email" class="form-control" id="formBG" placeholder="tu@email.com">
+                                            </div>
+                                            <div class="mb-3">
+                                            <label class="form-label">Mensaje</label>
+                                            <textarea class="form-control" rows="3" id="formBG" placeholder="Escribe tu mensaje"></textarea>
+                                            </div>
+                                            <button type="submit" class="btn btn-primary" id="btnEntrar">Enviar</button>
+                                        </form>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-4 mb-4">
+                            <div class="card h-100 shadow-sm">
+                                <div class="card-header bg-success text-white text-center" id="miHeader2">
+                                    <i class="fas fa-mobile-alt fa-3x mb-2"></i>
+                                </div>
+                                <div class="card-body" id="cartaInfo">
+                                    <h5 class="card-title">Dónde estamos</h5>
+                                    <div class="ratio ratio-16x9">
+                                        <iframe
+                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6358.160274438338!2d-3.610870588527354!3d37.17456647202665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd71fc96d2f7e49b%3A0x42c93f4769112be8!2sFreakMedia!5e0!3m2!1ses!2ses!4v1732213634193!5m2!1ses!2ses"
+                                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>   
+                    </div>
+                </section>
+
+                <!-- Jumbotron, recuadro de texto para resaltar información importante y/o relevante -->
+                <section class="mb-5">
+                    <div class="mt-4 p-5 bg-primary text-white rounded" id="inicio">
+                        <h1 id="jumboTitulo">Breve Historia</h1>
+                        <p>Todo comenzó en 2015, en Granada, cuando estaba en un punto de
+                                        mi vida en el que sabía que quería hacer algo diferente, algo mío. Desde que era
+                                        pequeño, siempre me había fascinado la tecnología. Recuerdo desmontar
+                                        ordenadores viejos, trastear con móviles que otros daban por rotos y pasar horas
+                                        investigando cómo funcionaban los circuitos y los componentes. Al principio, lo
+                                        hacía por curiosidad, pero con el tiempo, empecé a reparar cosas para amigos y
+                                        familiares. Lo que era un hobby se convirtió en una especie de red informal de
+                                        clientes que confiaban en mí para arreglar sus dispositivos o ayudarlos a
+                                        montarse un PC.
+                                        Un día, después de ayudar a un amigo a ensamblar un ordenador gaming con un
+                                        presupuesto ajustado, me di cuenta de algo importante. Había mucha gente
+                                        buscando soluciones asequibles y de calidad, y además, existía una oportunidad
+                                        real para dar una segunda vida a dispositivos que otros descartaban. Ese momento
+                                        fue un punto de inflexión. Pensé: ¿Y si convierto todo esto en algo serio? ¿Y si
+                                        monto mi propia empresa?</p>
+                    </div>
+                </section>
+
+                <section>
+                    <!-- Carousel -->
+                    <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+                    <!-- Indicators/dots -->
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                        <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                    </div>
+
+                    <!-- Carrusel que muestra imágenes que van pasando con el paso del tiempo -->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                        <img src="SPADE.png" alt="AS ROJO" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item">
+                        <img src="PURPLESPADE.png" alt="AS MORADO" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item">
+                        <img src="knife-cat-cat-knife.gif" alt="Gato" class="d-block w-100" width="350" height="400">
+                        <!--También pueden ponerse archivos GIFT-->
+                        </div>
+                    </div>
+
+                    <!-- Left and right controls/icons -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <!-- Modal, que permite abrir una pequeña pestaña de "login" -->
+    <div class="modal fade" id="loginModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content" id="fondoModal">
+                <div class="modal-header">
+                    <h5 class="modal-title">Iniciar Sesión</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" id="btnModal"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" id="formBG" placeholder="tu@email.com">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" id="formBG">
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="formBG">
+                            <label class="form-check-label" for="remember">Recordarme</label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" id="btnCancelar"
+                        data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" id="btnEntrar">Entrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <!-- Footer clásico para poner todo tipo de información de interés al final de la página web -->
+    <footer class="bg-dark text-light py-4 mt-5" id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5><i class="fas fa-laptop-code me-2"></i>SpadeTech</h5>
+                    <p class="text-muted">Tu tienda de componentes y servicio técnico de confianza</p>
+                </div>
+                <div class="col-md-3">
+                    <h6>Enlaces</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-light text-decoration-none">Inicio</a></li>
+                        <li><a href="Servicios.html" class="text-light text-decoration-none">Servicios</a></li>
+                        <li><a href="Contacto.html" class="text-light text-decoration-none">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h6>Síguenos</h6>
+                    <a href="#" class="text-light me-2"><i class="fab fa-facebook fa-lg"></i>Instagram</a>
+                    <a href="#" class="text-light me-2"><i class="fab fa-twitter fa-lg"></i>Youtube</a>
+                    <a href="#" class="text-light me-2"><i class="fab fa-linkedin fa-lg"></i>Linkedin</a>
+                </div>
+            </div>
+            <hr class="my-3">
+            <div class="text-center">
+                <small>&copy; 2025 SpadeTech. Todos los derechos de autor reservados.</small>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

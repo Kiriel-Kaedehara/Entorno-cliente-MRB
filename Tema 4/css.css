@@ -1,0 +1,91 @@
+body {
+  background-color: black !important;
+}
+
+#h1 {
+  text-shadow: 3px 3px 5px rgb(163, 0, 199) !important;
+}
+
+
+.container {
+  background-color: black !important;
+  color: white !important;
+}
+
+.form-label {
+  color: white !important;
+}
+
+.form-control {
+  background-color: rgba(34, 0, 72, 0.8) !important;
+  color: white !important;
+  border: 2px solid #a64dff !important;
+}
+
+.form-control:focus {
+  background-color: rgba(34, 0, 72, 0.9) !important;
+  color: white !important;
+  border-color: #a64dff !important;
+  box-shadow: 0 0 0 0.25rem rgba(166, 77, 255, 0.25) !important;
+}
+
+#bodyB {
+  background-color: black !important;
+}
+
+/* Estilos para todos los botones */
+.btn-primary {
+  background-color: black !important;
+  border: 2px solid #a64dff !important;
+  color: #a64dff !important;
+  transition: all 0.3s ease !important;
+}
+
+.btn-primary:hover {
+  background-color: #a64dff !important;
+  border-color: #a64dff !important;
+  color: white !important;
+  box-shadow: 0 0 15px rgba(166, 77, 255, 0.5) !important;
+  transform: scale(1.05) !important;
+}
+
+#resultado {
+  background-color: rgba(34, 0, 72, 0.8) !important;
+  color: white !important;
+  border: none !important;
+  box-shadow: 5px 5px 15px rgb(136, 0, 163) !important;
+}
+
+/* Estilos para los badges de los bucles */
+.badge {
+  background-color: white !important;
+  color: black !important;
+  transition: all 0.3s ease !important;
+}
+
+/* Estilos específicos para los botones de los bucles por badges */
+#buclesBadge .btn-primary {
+  background-color: black !important;
+  border: 2px solid white !important;
+  color: white !important;
+}
+
+#buclesBadge .btn-primary:hover {
+  background-color: white !important;
+  border-color: white !important;
+  color: black !important;
+}
+
+/* Estilos para los botones de primo, compuesto y perfecto */
+#PrimoCompuestoPerfecto .btn-primary {
+  background-color: black !important;
+  border: 2px solid #a64dff !important;
+  color: #a64dff !important;
+}
+
+#PrimoCompuestoPerfecto .btn-primary:hover {
+  background-color: #a64dff80 !important;
+  border-color: #a64dff !important;
+  color: white !important;
+  box-shadow: 0 0 15px rgba(166, 77, 255, 0.5) !important;
+}

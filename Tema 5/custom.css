@@ -1,0 +1,194 @@
+/* =========================================================================
+   Estilos personalizados para Tema 5 – Manipulación del DOM
+   Este archivo contiene estilos específicos para la práctica de DOM
+   ========================================================================= */
+
+/* Clase para resaltar elementos */
+body{
+    background-color: black;
+}
+#h1{
+    color: blueviolet !important;
+    text-shadow: blueviolet 1px 0 10px;
+}
+
+#ej1{
+    color: rgb(255, 255, 255) !important;
+    text-shadow: rgb(215, 0, 219) 1px 0 10px;
+    background-color: rgba(128, 128, 128, 0.37);
+}
+
+#btn-ej1{
+    background-color: rgb(0, 0, 0);
+    border: rgb(87, 0, 169) 2px solid;
+}
+
+#btn-ej1:hover{
+    background-color: rgb(87, 0, 169);
+    color: white;
+    
+}
+
+#ej2{
+    color: rgb(255, 255, 255) !important;
+    text-shadow: rgb(215, 0, 219) 1px 0 10px;
+    background-color: rgba(128, 128, 128, 0.37);
+}
+
+#btn-add{
+    background-color: rgb(0, 0, 0);
+    border: rgb(87, 0, 169) 2px solid;
+}
+
+#btn-add:hover{
+    background-color: rgb(87, 0, 169);
+    color: white;
+    
+}
+
+#btn-remove{
+    background-color: rgb(0, 0, 0);
+    border: rgb(255, 255, 255) 2px solid;
+}
+
+#btn-remove:hover{
+    background-color: rgb(255, 255, 255);
+    color: black;
+    
+}
+
+#ej3{
+    color: rgb(255, 255, 255) !important;
+    text-shadow: rgb(215, 0, 219) 1px 0 10px;
+    background-color: rgba(128, 128, 128, 0.37);
+}
+
+#ej4{
+    color: rgb(255, 255, 255) !important;
+    text-shadow: rgb(215, 0, 219) 1px 0 10px;
+    background-color: rgba(128, 128, 128, 0.37);
+}
+
+#nuevoTexto{
+    background-color: rgb(0, 0, 0) !important;
+    border: rgb(87, 0, 169) 2px solid !important;
+    color: white !important;
+}
+
+#nuevoTexto::placeholder{
+    color: rgb(230, 0, 255) !important;
+}
+
+#btnCambiar{
+    background-color: rgb(0, 0, 0);
+    border: rgb(87, 0, 169) 2px solid;
+}
+
+#btnCambiar:hover{
+    background-color: rgb(87, 0, 169);
+    color: white;
+    
+}
+
+#ej5{
+    color: rgb(255, 255, 255) !important;
+    text-shadow: rgb(215, 0, 219) 1px 0 10px;
+    background-color: rgba(128, 128, 128, 0.37);
+}
+
+#tareaInput{
+    background-color: rgb(0, 0, 0) !important;
+    border: rgb(87, 0, 169) 2px solid !important;
+    color: white !important;
+}
+
+#tareaInput::placeholder{
+    color: rgb(230, 0, 255) !important;
+}
+
+#btnAñadirTarea{
+    background-color: rgb(0, 0, 0);
+    border: rgb(87, 0, 169) 2px solid;
+}
+
+#btnAñadirTarea:hover{
+    background-color: rgb(87, 0, 169);
+    color: white;
+    
+}
+
+#btnBorrarCompletadas{
+    background-color: rgb(0, 0, 0);
+    border: rgb(255, 255, 255) 2px solid;
+}
+
+#btnBorrarCompletadas:hover{
+    background-color: rgb(255, 255, 255);
+    color: black;
+    
+}
+
+#textoTarea{
+    background-color: rgb(0, 0, 0) !important;
+    border: rgb(87, 0, 169) 2px solid !important;
+    color: white !important;
+}
+.resaltado {
+    background: #ff00dd6b;
+}
+
+#textoTarea::placeholder{
+    color: rgb(230, 0, 255) !important;
+}
+
+#listaTareas{
+    background-color: rgba(0, 0, 0, 0.493) !important;
+    border: rgb(87, 0, 169) 2px solid !important;
+    color: white !important;
+}
+
+#listaTareas li{
+    background-color: rgb(0, 0, 0) !important;
+    border: rgb(87, 0, 169) 2px solid !important;
+    color: white !important;
+}
+
+/* Clase para tareas completadas */
+.completada {
+    text-decoration: line-through;
+    color: #e600ff !important;
+}
+
+/* Estilos para el contenedor de la lista de tareas */
+#listaTareas {
+    min-height: 100px;
+    background-color: #f8f9fa;
+}
+
+/* Estilos para cada elemento de la lista de tareas */
+#listaTareas li {
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.5rem;
+    background-color: white;
+    border: 1px solid #dee2e6;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* Efecto hover para los elementos de la lista */
+#listaTareas li:hover {
+    background-color: #e9ecef;
+    border-color: #adb5bd;
+}
+
+/* Estilo específico para tareas completadas en la lista */
+#listaTareas li.completada {
+    background-color: #f8f9fa;
+    border-color: #dee2e6;
+}
+
+.foco{
+    outline: 2px solid #bd00c0 !important;
+}
+

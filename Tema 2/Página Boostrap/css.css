@@ -1,0 +1,321 @@
+body{
+  background-color: black;
+}
+#miNavbar {
+  background-color: rgb(22, 0, 48) !important;
+  
+}
+
+#marca{
+    color: white !important;
+    text-shadow: 5px 5px 9px #f200ff;
+    
+}
+
+#miContainer{
+  background-color: rgb(22, 0, 48) !important;
+  color: white !important;
+    text-shadow: 5px 5px 9px #f200ff;
+
+}
+
+#Navegacion{
+  color: white !important;
+  text-decoration: underline;
+}
+a:hover{
+    color:#f200ff !important;
+  text-shadow: 5px 5px 9px white;
+}
+
+a:visited{
+    color: white;
+    text-shadow: 5px 5px 9px #f200ff;
+}
+
+#inicio{
+  background-color: black !important;
+  box-shadow: 10px 10px 15px#8e0096;
+}
+
+#btnComenzar {
+  background-color: rgba(125, 0, 163, 0.126); 
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease !important;
+  box-shadow: none !important;
+}
+
+#btnComenzar{
+  background-color: #8e0096 !important;
+  box-shadow: 5px 5px 15px rgb(136, 0, 163) !important;
+}
+
+#btnSabermas{
+  box-shadow: 5px 5px 15px rgb(136, 0, 163) !important;
+}
+
+#mb-5{
+  background-color: black !important;
+}
+
+#Progreso{
+  color: white !important;
+    text-shadow: 5px 5px 9px #f200ff;
+}
+
+#form-label{
+  color: white !important;
+}
+
+#mb-3{
+  background-color: black !important;
+}
+
+#Progreso{
+  color: white !important;
+    text-shadow: 5px 5px 9px #f200ff;
+}
+
+#form-label{
+  color: white !important;
+}
+
+#mb-4{
+  background-color: black !important;
+  color: white !important;
+}
+
+#id{
+  background-color: black !important;
+}
+
+#alerta {
+  background-color: black !important; 
+  color: white !important; 
+  border: 3px solid #f200ff !important;
+}
+
+#alerta .btn-close {
+    filter: invert(19%) sepia(83%) saturate(4000%) hue-rotate(275deg) brightness(150%) contrast(95%);
+}
+
+#progress-bar{
+  background-color: #6e0074 !important;
+}
+
+#progress-bar2{
+  background-color: #c000ca !important;
+}
+
+#miHeader{
+  background-color: #c000ca !important;
+}
+
+#cartaMontaje{
+  background-color: black !important;
+  color: white !important;
+
+}
+
+#btnMontaje {
+  background-color: #c000ca;
+  border: none;
+}
+
+#btnMontaje:focus {
+  outline: none; 
+  box-shadow: 0 0 0 0.25rem rgba(192, 0, 202, 0.5); 
+}
+
+#miHeader2{
+  background-color: #6e0074 !important;
+}
+
+#cartaInfo{
+  background-color: black !important;
+  color: white !important;
+
+}
+
+#btnInfo {
+  background-color: #6e0074;
+  border: none;
+}
+
+#btnInfo:focus {
+  outline: none; 
+  box-shadow: 0 0 0 0.25rem rgba(242, 0, 255, 0.644); 
+}
+
+#miHeader3{
+  background-color: #320074 !important;
+}
+
+#cartaReparaciones{
+  background-color: black !important;
+  color: white !important;
+
+}
+
+#btnRepa {
+  background-color: #320074;
+  color: white !important;
+  border: none;
+}
+
+#btnRepa:focus {
+  outline: none; 
+  box-shadow: 0 0 0 0.25rem rgba(242, 0, 255, 0.644); 
+}
+
+.card-title{
+  text-shadow: 5px 5px 9px #f200ff;
+}
+
+#Soluciones{
+  color: white !important;
+  text-shadow: 5px 5px 9px #f200ff;
+}
+
+#badge{
+  background-color: #f200ff !important;
+}
+
+#badge2{
+  background-color: #c000ca !important;
+}
+
+#badge3{
+  background-color: #8e0096 !important;
+}
+
+#badge4{
+  background-color: #6e0074 !important;
+}
+
+#badge5{
+  background-color: #4500a0 !important;
+}
+
+#badge6{
+  background-color: #320074 !important;
+}
+
+#bgW-tW{
+  background-color: #180038 !important;
+  color: white !important;
+}
+
+.miTablaHead{
+  background-color: black !important;
+  color:white !important;
+  text-shadow: 5px 5px 9px #f200ff;
+  border: 2px solid #f200ff;
+}
+
+.miTabla {
+  background-color: #180038 !important;
+  color: white !important;
+  border: 2px solid #f200ff;
+}
+
+#fondoModal{
+  background-color: rgb(22, 0, 48) !important;
+  color: white !important;
+}
+
+#btnModal{
+  filter: invert(19%) sepia(83%) saturate(4000%) hue-rotate(275deg) brightness(150%) contrast(95%);
+  color: white !important;
+}
+
+#formBG{
+  background-color: black !important;
+  color: white !important;
+  border: none;
+}
+
+#formBG:focus {
+  outline: none; 
+  box-shadow: 0 0 0 0.25rem rgba(242, 0, 255, 0.644); 
+}
+
+#btnCancelar {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    border: 2px solid #ffffff !important;
+    border-radius: 6px !important;
+    padding: 0.5rem 1rem !important;
+    font-weight: 600 !important;
+    transition: all 0.2s ease !important;
+}
+
+#btnCancelar:hover {
+     background-color: white !important;
+    color: black !important;
+    border-color: white !important;
+}
+
+#btnEntrar {
+    background-color: #000000 !important;
+    color: #a64dff !important;
+    border: 2px solid #a64dff !important;
+    border-radius: 6px !important;
+    padding: 0.5rem 1rem !important;
+    font-weight: 600 !important;
+    transition: all 0.2s ease !important;
+}
+
+#btnEntrar:hover {
+    background-color: #a64dff !important;
+    color: #ffffff !important;
+    border-color: #a64dff !important;
+}
+
+#footer{
+  background-color: black !important;
+  box-shadow: 10px 10px 10px 15px#8e0096;
+}
+
+#jumboTitulo{
+  text-shadow: 5px 5px 9px #f200ff;
+}
+
+
+#fondoDrop .dropdown-menu {
+  background-color: black;
+  border: 1px solid #222; 
+}
+
+#fondoDrop .dropdown-item {
+  color: white;
+}
+
+#fondoDrop .dropdown-item:hover {
+  background-color: #333; 
+  color: #fff;
+}
+
+#miPagination {
+    background-color: #000; 
+    
+}
+
+#miPagination .page-link {
+    color: white; 
+    background-color: transparent;
+    border: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#miPagination .page-link:hover {
+    background-color: #333; 
+    color: #fff; 
+}
+
+#miPagination .page-link:focus {
+    box-shadow: 0 0 5px #8000ff;
+    outline: none;
+}

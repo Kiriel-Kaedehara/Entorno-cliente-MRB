@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css.css">
+    <link rel="icon" type="image/png" href="ruta/a/tu-icono.png">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+        </script>
+    <title>Spades</title>
+</head>
+
+<body>
+    <!--NavBar con los diferentes links-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="miNavbar">
+        <!--ID para cambiar el color de fondo con CSS-->
+        <div class="container">
+            <a href="#" class="navbar-brand fw-bold" id="marca"><i class="fas fa-laptop-code me-2"></i>SpadeTech</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a href="index.html" class="nav-link active">Inicio</a></li>
+                    <li class="nav-item"><a href="Servicios.html" class="nav-link active">Servicios</a></li>
+                    <li class="nav-item"><a href="Contacto.html" class="nav-link active">Contacto</a></li>
+                </ul>
+                <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- barra lateral -->
+            <nav class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse" style="margin-top: 56px;"
+                id="miContainer">
+                <div class="position-sticky pt-3">
+                    <h6 class="sidebar-heading text-muted px-3 mt-4 mb-1" id="Navegacion">Navegación</h6>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#"><i class="fas fa-home me-2"></i>Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fas fa-chart-bar me-2"></i>Análisis</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fas fa-users me-2"></i>Clientes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fas fa-cog me-2"></i>Configuración</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- Contenido principal -->
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4" style="margin-top: 56px;">
+                <!-- Sección "Hero", para destacar sobre lo demás -->
+                <section id="inicio" class="hero bg-primary text-white py-5 mb-5 rounded">
+                    <div class="container text-center">
+                        <h1 class="display-4 fw-bold">SpadeTech</h1>
+                        <p class="lead">Informática de confianza, sin ruletas</p>
+                        <button class="btn btn-light btn-lg me-2" id="btnComenzar">Comenzar</button>
+                        <!--Este botón es un "Collapsible, permite mostrar u ocultar información clicando en él"-->
+                        <button class="btn btn-outline-light btn-lg" id="btnSabermas" data-bs-toggle="collapse" data-bs-target="#demo" aria-expanded="false" aria-controls="demo">Saber más</button>
+                        <!-- Contenido colapsable -->
+                        <div id="demo" class="collapse mt-3">
+                        <p>SpadeTech, tu tienda de componentes y reparación de confianza (Además adoramos a los gatitos.)</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Barras de progreso que muestran un pseudo progreso -->
+                <section class="mb-5" id="mb-5">
+                    <h3 id="Progreso">Nuestro Progreso</h3>
+                    <div class="mb-3" id="mb-3">
+                        <label class="form-label" id="form-label">Satisfacción del Cliente</label>
+                        <div class="progress">
+                            <div class="progress-bar bg-success" id="progress-bar" style="width: 95%">95%</div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" id="form-label">Proyectos Completados</label>
+                        <div class="progress">
+                            <div class="progress-bar bg-info" id="progress-bar2" style="width: 88%">88%</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Alerta que puede quitarse -->
+                <div class="alert alert-info alert-dismissible fade show" role="alert" id="alerta">
+                    <i class="fas fa-info-circle me-2"></i>
+                    <strong>¡Nueva actualización!</strong> Hemos lanzado nuestra nueva plataforma de servicios.
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
+
+                <!-- Sección de "cartas", donde podemos poner información en un formato de caja -->
+                <section id="servicios" class="mb-5">
+                    <h2 class="mb-4" id="mb-4">Nuestros Servicios</h2>
+                    <div class="row">
+                        <div class="col-lg-4 mb-4">
+                            <div class="card h-100 shadow-sm">
+                                <div class="card-header bg-primary text-white text-center" id="miHeader">
+                                    <i class="fas fa-code fa-3x mb-2"></i>
+                                </div>
+                                <div class="card-body" id="cartaMontaje">
+                                    <h5 class="card-title">Montaje y mantenimiento de</h5>
+                                    <p class="card-text">Hacemos montaje y mantenimiento de equipos
+                                        tanto domésticos como de empresas.</p>
+                                    <div class="d-grid">
+                                        <button class="btn btn-primary" id="btnMontaje">Ver más</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 mb-4">
+                            <div class="card h-100 shadow-sm">
+                                <div class="card-header bg-success text-white text-center" id="miHeader2">
+                                    <i class="fas fa-mobile-alt fa-3x mb-2"></i>
+                                </div>
+                                <div class="card-body" id="cartaInfo">
+                                    <h5 class="card-title">Componentes Informáticos</h5>
+                                    <p class="card-text">Poseemos una amplia gama de componentes infomáticos
+                                        para montar o renovar tu PC.</p>
+                                    <div class="d-grid">
+                                        <button class="btn btn-success" id="btnInfo">Ver más</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 mb-4">
+                            <div class="card h-100 shadow-sm">
+                                <div class="card-header bg-warning text-dark text-center" id="miHeader3">
+                                    <i class="fas fa-cloud fa-3x mb-2"></i>
+                                </div>
+                                <div class="card-body" id="cartaReparaciones">
+                                    <h5 class="card-title">Reparaciones</h5>
+                                    <p class="card-text">Soluciones electrónicas y reparaciones a nivel
+                                        de microsoldadura y reballing.</p>
+                                    <div class="d-grid">
+                                        <button class="btn btn-warning" id="btnRepa">Ver más</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Sección de las "medallas" estas son unos "botones" que muestran diferente información relevante -->
+                <section class="mb-5">
+                    <h3 id="Soluciones">Soluciones adicionales disponibles: </h3>
+                    <span class="badge bg-primary me-2 mb-2" id="badge">JavaScript</span>
+                    <span class="badge bg-success me-2 mb-2" id="badge2">Node.js</span>
+                    <span class="badge bg-danger me-2 mb-2" id="badge3">Angular</span>
+                    <span class="badge bg-warning me-2 mb-2" id="badge4">Python</span>
+                    <span class="badge bg-info me-2 mb-2" id="badge5">React</span>
+                    <span class="badge bg-secondary me-2 mb-2" id="badge6">Docker</span>
+                </section>
+
+                <!-- Una especie de tabla en la que el usuario puede interactuar para obtener información, en este caso respuesta a las preguntas más típicas -->
+                <section class="mb-5">
+                    <h3 id="Soluciones">Preguntas Frecuentes</h3>
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#faq1"  id="bgW-tW">
+                                    ¿Qué servicios ofrecen?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body" id="bgW-tW">
+                                    Ofrecemos montaje y mantenimiento de equipos, además de desarrollo de aplicaciones
+                                    web.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#faq2" id="bgW-tW">
+                                    ¿Cuánto tiempo toman los proyectos?
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body" id="bgW-tW">
+                                    El tiempo varía según la complejidad, para un montaje aproximadamente 3 días,
+                                    mantenimiento 1 día y para el desarrollo web entre 2 a 12 semanas.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Tabla con contenido diverso -->
+                <section class="mb-5">
+                    <h3 id="Soluciones">Precios</h3>
+                    <div class="table-responsive">
+                        <table class="table table-striped table-hover">
+                            <thead class="miTablaHead">
+                                <tr>
+                                    <th>Servicio</th>
+                                    <th>Precio Básico</th>
+                                    <th>Precio Premium</th>
+                                    <th>Tiempo</th>
+                                </tr>
+                            </thead>
+                            <tbody class="miTabla">
+                                <tr class="miTabla">
+                                    <td>Montaje/Mantenimientob</td>
+                                    <td>50€</td>
+                                    <td>90€</td>
+                                    <td>1 - 3 días</td>
+                                </tr>
+                                <tr class="miTabla">
+                                    <td>Reparaciones</td>
+                                    <td>100€</td>
+                                    <td>500€</td>
+                                    <td>1 - 3 semanas</td>
+                                </tr>
+                                <tr class="miTabla">
+                                    <td>Desarrollo Web</td>
+                                    <td>500€</td>
+                                    <td>1500€/hora</td>
+                                    <td>2 - 12 semanas</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <!-- Modal, que permite abrir una pequeña pestaña de "login" -->
+    <div class="modal fade" id="loginModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content" id="fondoModal">
+                <div class="modal-header">
+                    <h5 class="modal-title">Iniciar Sesión</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" id="btnModal"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" id="formBG" placeholder="tu@email.com">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" id="formBG">
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="formBG">
+                            <label class="form-check-label" for="remember">Recordarme</label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" id= "btnCancelar" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" id= "btnEntrar">Entrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer clásico para poner todo tipo de información de interés al final de la página web -->
+    <footer class="bg-dark text-light py-4 mt-5" id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5><i class="fas fa-laptop-code me-2"></i>SpadeTech</h5>
+                    <p class="text-muted">Tu tienda de componentes y servicio técnico de confianza</p>
+                </div>
+                <div class="col-md-3">
+                    <h6>Enlaces</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-light text-decoration-none">Inicio</a></li>
+                        <li><a href="Servicios.html" class="text-light text-decoration-none">Servicios</a></li>
+                        <li><a href="Contacto.html" class="text-light text-decoration-none">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h6>Síguenos</h6>
+                    <a href="#" class="text-light me-2"><i class="fab fa-facebook fa-lg"></i>Instagram</a>
+                    <a href="#" class="text-light me-2"><i class="fab fa-twitter fa-lg"></i>Youtube</a>
+                    <a href="#" class="text-light me-2"><i class="fab fa-linkedin fa-lg"></i>Linkedin</a>
+                </div>
+            </div>
+            <hr class="my-3">
+            <div class="text-center">
+                <small>&copy; 2025 SpadeTech. Todos los derechos de autor reservados.</small>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

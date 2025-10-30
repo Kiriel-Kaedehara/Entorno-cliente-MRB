@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+        </script>
+</head> <!--Hecho por Manuel Robles AKKA Kiriel/Kiri-->
+
+<body class="bg-dark" id="bodyB">
+    <div class="container py-5">
+        <h1 class="mb-4" id="h1">Calculadora y Bucles Bootstrap 5</h1>
+
+        <!-- Inputs -->
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <label for="numero1" class="form-label">Número 1:</label>
+                <input type="number" id="numero1" class="form-control" placeholder="Introduce el primer número">
+            </div>
+            <div class="col-md-6">
+                <label for="numero2" class="form-label">Número 2:</label>
+                <input type="number" id="numero2" class="form-control" placeholder="Introduce el segundo número">
+            </div>
+        </div>
+
+        <!-- Botones de operaciones -->
+        <div class="d-flex flex-wrap gap-2 mb-3">
+            <!-- Botón suma -->
+            <button class="btn btn-primary" onclick="sumar()">Sumar</button>
+            <!-- Botón restar -->
+            <button class="btn btn-primary" onclick="restar()">Restar</button>
+            <!-- Botón multiplicar -->
+            <button class="btn btn-primary" onclick="multiplicar()">Multiplicar</button>
+            <!-- Botón dividir -->
+            <button class="btn btn-primary" onclick="dividir()">Dividir</button>
+            <!--Botón potencia-->
+            <button class="btn btn-primary" onclick="potencia()">Potencia</button>
+
+
+        </div>
+        <!-- Grupo de botones para bucles For, While y Do-While -->
+        <div class="btn-group" id="buclesTexto">
+            <!--Estos muestran en texto las iteraciones de los bucles-->
+            <button type="button" class="btn btn-primary" onclick="Fbucle()">For</button>
+            <button type="button" class="btn btn-primary" onclick="Wbucle()">While</button>
+            <button type="button" class="btn btn-primary" onclick="DWbucle()">Do-While</button>
+            
+        </div>
+
+        <div class="btn-group" id="buclesBadge">
+            <!--Estos muestran en texto las iteraciones de los bucles-->
+            <button type="button" class="btn btn-primary" onclick="FbucleB()">For (Badge)</button>
+            <button type="button" class="btn btn-primary" onclick="WbucleB()">While (Badge)</button>
+            <button type="button" class="btn btn-primary" onclick="DWbucleB()">Do-While (Badge)</button>
+
+        </div>
+
+        <div class="btn-group" id="PrimoCompuestoPerfecto">
+            <!--Primos, nCompuestos y perfectos-->
+            <button type="button" class="btn btn-primary" onclick="primo()">Primo</button>
+            <button type="button" class="btn btn-primary" onclick="nCompuesto()">Número compuesto</button>
+            <button type="button" class="btn btn-primary" onclick="perfecto()">Perfecto</button>
+
+        </div>
+        <br><br>
+        <!-- Resultado -->
+        <div class="alert alert-info" id="resultado">Resultado</div>
+    </div>
+
+    <script>
+        const resultado = document.getElementById("resultado");
+
+        function getNumero1() {
+            return Number(document.getElementById("numero1").value) || 0;
+        }
+
+        function getNumero2() {
+            return Number(document.getElementById("numero2").value) || 0;
+        }
+
+        //Bloques de funciones de la calculadora
+        function sumar() { 
+            let n1 = getNumero1();
+            let n2 = getNumero2();
+            let total = n1 + n2;
+            resultado.innerHTML = `<strong>Resultado de la suma:</strong> ${total}`;
+        }
+
+        function restar() { 
+            let n1 = getNumero1();
+            let n2 = getNumero2();
+            let total = n1 - n2;
+            resultado.innerHTML = `<strong>Resultado de la suma:</strong> ${total}`;
+        }
+
+        function multiplicar() { 
+            let n1 = getNumero1();
+            let n2 = getNumero2();
+            let total = n1 * n2;
+            resultado.innerHTML = `<strong>Resultado de la suma:</strong> ${total}`;
+        }
+
+        function dividir() { 
+            let n1 = getNumero1();
+            let n2 = getNumero2();
+            let total = n1 / n2;
+            let resto = n1 % n2; //Como el módulo es el resto, he decidido aplicarlo en la función "dividir"
+            resultado.innerHTML = `<strong>Resultado de la suma:</strong> ${total} ; <strong>Resto:</strong> ${resto}`;
+        }
+
+        function potencia() { 
+            let n1 = getNumero1();
+            let n2 = getNumero2();
+            let total = n1 ** n2;
+            resultado.innerHTML = `<strong>Resultado de la suma:</strong> ${total}`;
+        }
+
+        function Fbucle() {
+            let n1 = getNumero1();
+            resultado.innerHTML = `<strong>Bucle For (Texto):</strong>`;
+            for (let i = 1; i <= n1; i++) {
+                resultado.innerHTML += `<br>Iteración número: ${i}`;
+            }
+            if (n1 < 1) {
+                resultado.innerHTML += `<br>No se realizan iteraciones para números menores que 1.`;
+            }
+        }
+
+        function Wbucle() {
+            let n1 = getNumero1();
+            let i = 1;
+            resultado.innerHTML = `<strong>Bucle While (Texto):</strong>`;
+            while (i <= n1) {
+                resultado.innerHTML += `<br>Iteración número: ${i}`;
+                i++;
+            }
+            if (n1 < 1) {
+                resultado.innerHTML += `<br>No se realizan iteraciones para números menores que 1.`;
+            }
+        }
+
+        function DWbucle() {
+            let n1 = getNumero1();
+            let i = 1;
+            if (n1 < 1) {
+                resultado.innerHTML = `<strong>Bucle Do-While (Texto):</strong> <br>No se realizan iteraciones para números menores que 1.`;
+                return;
+            }
+            
+            do {
+                resultado.innerHTML += `<br>Iteración número: ${i}`;
+                i++;
+            } while (i <= n1);
+            
+        }
+
+        function FbucleB() {
+            let n1 = getNumero1();
+            resultado.innerHTML = `<strong>Bucle For (Badge):</strong><br>`;
+            for (let i = 1; i <= n1; i++) {
+                resultado.innerHTML += `<span class="badge bg-secondary me-1">${i}</span>`;
+            }
+            if (n1 < 1) {
+                resultado.innerHTML += `No se realizan iteraciones para números menores que 1.`;
+            }
+        }
+
+        function WbucleB() {
+            let n1 = getNumero1();
+            let i = 1;
+            resultado.innerHTML = `<strong>Bucle While (Badge):</strong><br>`;
+            while (i <= n1) {
+                resultado.innerHTML += `<span class="badge bg-secondary me-1">${i}</span>`;
+                i++;
+            }
+            if (n1 < 1) {
+                resultado.innerHTML += `No se realizan iteraciones para números menores que 1.`;
+            }
+        }
+
+        function DWbucleB() {
+            let n1 = getNumero1();
+            let i = 1;
+            if (n1 < 1) {
+                resultado.innerHTML = `<strong>Bucle Do-While (Badge):</strong> <br>No se realizan iteraciones para números menores que 1.`;
+                return;
+            }
+
+            do {
+                resultado.innerHTML += `<span class="badge bg-secondary me-1">${i}</span>`;
+                i++;
+            } while (i <= n1);
+            
+        }
+
+        function primo() {
+            let n1 = getNumero1();
+            if (n1 < 2) {
+                resultado.innerHTML = `<strong>${n1}</strong> no es un número primo.`;
+                return;
+            }
+            for (let i = 2; i < n1; i++) {
+                if (n1 % i === 0) {
+                    resultado.innerHTML = `<strong>${n1}</strong> no es un número primo.`;
+                    return;
+                }
+            }
+            resultado.innerHTML = `<strong>${n1}</strong> es un número primo.`;
+            //Estos números son aquellos que solo son divisibles por 1 y por sí mismos
+        }
+
+        function nCompuesto() {
+            let n1 = getNumero1();
+            if (n1 <= 1) {
+                resultado.innerHTML = `<strong>${n1}</strong> no es un número compuesto.`;
+                return;
+            }
+            for (let i = 2; i < n1; i++) {
+                if (n1 % i === 0) {
+                    resultado.innerHTML = `<strong>${n1}</strong> es un número compuesto.`;
+                    return;
+                }
+            }
+            resultado.innerHTML = `<strong>${n1}</strong> no es un número compuesto.`;
+            //Estos números son aquellos que tienen más de dos divisores
+        }
+
+        function perfecto() {
+            let n1 = getNumero1();
+            if (n1 <= 1) {
+                resultado.innerHTML = `<strong>${n1}</strong> no es un número perfecto.`;
+                return;
+            }
+            let sumaDivisores = 0;
+            for (let i = 1; i < n1; i++) {
+                if (n1 % i === 0) {
+                    sumaDivisores += i;
+                }
+            }
+            if (sumaDivisores === n1) {
+                resultado.innerHTML = `<strong>${n1}</strong> es un número perfecto.`;
+            } else {
+                resultado.innerHTML = `<strong>${n1}</strong> no es un número perfecto.`;
+            }
+            /*Estos números son aquellos que son iguales a la suma de sus divisores propios
+            esto quiere decir que por ejemplo, 1 + 2 + 3 = 6, por lo que 6 es un número perfecto*/
+        }
+    </script>
+</body>
+
+</html>

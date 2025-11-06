@@ -154,7 +154,7 @@ document.getElementById('run-e10').addEventListener('click', function () {
     <h3>Sin espacios (trim):</h3> "${texto.trim()}"<br>
     <h3>Posición de 'Mundo':</h3> ${texto.indexOf('Mundo')}<br>
     <h3>Número aleatorio:</h3> ${Math.random()}<br>
-    <h3>Fecha actual (timestamp):</h3> ${Date.now()}`; 
+    <h3>Fecha actual:</h3> ${Date.now()}`; 
     /*Se coge el "let" (variable) texto y para
     poder usarlo e imprimirlo, se inserta el valor con ${}. En el caso de "Math" y "Date", no es intrínsecamente necesario
     llamar a "texto" para ser ejecutadas y mostradas, ya que con ${} se evalúa el contenido y se muestra

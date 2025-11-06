@@ -43,7 +43,7 @@ document.getElementById('run-e3').addEventListener('click', function () {
 });
 
 // Ejercicio 4 - Hoisting con var (plantilla)
-document.getElementById('run-e4').addEventListener('click', function () { //preguntar al profesor
+document.getElementById('run-e4').addEventListener('click', function () { 
   // TODO: reproduce el ejemplo en el código editando esta función.
   function mostrarVar() { /*El hoisting "reorganiza" el código
     de tal forma que, pasa la variable hacia arriba, pero no su valor definido */

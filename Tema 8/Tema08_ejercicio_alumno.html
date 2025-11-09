@@ -201,6 +201,9 @@
 								else {
 									alert('Carácteres Incorrectos');
 									console.log('Carácteres Incorrectos');
+									/*Al no indicar en el form el atributo novalidate, los else no se muestran, ya que el
+									navegador valida antes de ejecutarse el JS, pero una si el nombre y apellidos es correcto,
+									muestra el alert de que efectivamente, los carácteres y nombre son válidos*/ 
 								}
 								if (validarPattern.reportValidity()) {
 									alert('Nombre válido,' + nombre)
@@ -248,7 +251,7 @@
 
 									return;
 								}
-								
+
 								document.getElementById('bs-msg-ej5').innerHTML = '<div class="alert alert-danger">Las contraseñas no son iguales</div>';
 							});
 						</script>

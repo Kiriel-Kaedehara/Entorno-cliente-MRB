@@ -66,12 +66,13 @@
 						</div>
 					</form>
 					<div id="bs-msg-ej2" class="mt-2"></div>
-					
+
 					<!-- EJ3 -->
 					<div class="card">
 						<div class="card-header">Ejercicio 3 – JS básico</div>
 						<div class="card-body">
 							<form id="bs-form-ej3" class="row g-3">
+								<!--Sin el novalidate, los else no muestran los alert-->
 								<div class="col-md-6">
 									<label for="Nombre y apellidos" class="form-label">Nombre y apellidos</label>
 									<input class="form-control" type="text" name="Nombre_Y_Apellidos"
@@ -191,6 +192,24 @@
 							//Ej 3
 							document.getElementById('bs-form-ej3').addEventListener('submit', function (e) {
 								e.preventDefault();
+
+								const validarPattern = this.Nombre_Y_Apellidos;
+								const nombre = validarPattern.value.trim();
+								if (validarPattern.checkValidity()) {
+									alert('Carácteres correctos');
+								}
+								else {
+									alert('Carácteres Incorrectos');
+									console.log('Carácteres Incorrectos');
+								}
+								if (validarPattern.reportValidity()) {
+									alert('Nombre válido,' + nombre)
+								}
+								else {
+									alert('Nombre inválido,' + nombre)
+									console.log('Nombre inválido,' + nombre);
+								}
+
 								document.getElementById('bs-msg-ej3').innerHTML = '<div class="alert alert-success">El formulario ha sido enviado</div>';
 							});
 							//Ej 4
@@ -229,8 +248,7 @@
 
 									return;
 								}
-
-
+								
 								document.getElementById('bs-msg-ej5').innerHTML = '<div class="alert alert-danger">Las contraseñas no son iguales</div>';
 							});
 						</script>

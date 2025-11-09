@@ -233,9 +233,29 @@
 							//Ej 5
 							document.getElementById('bs-form-ej5').addEventListener('submit', function (e) {
 								e.preventDefault();
+								const validarPattern = this.Nombre_Y_Apellidos;
+								const nombre = validarPattern.value.trim();
 								const contraseña = this.contraseña.value.trim();
 								const repetirContraseña = this.repetirContraseña.value.trim();
 
+								if (validarPattern.checkValidity()) {
+									alert('Carácteres correctos');
+								}
+								else {
+									alert('Carácteres Incorrectos');
+									console.log('Carácteres Incorrectos');
+									/*Al no indicar en el form el atributo novalidate, los else no se muestran, ya que el
+									navegador valida antes de ejecutarse el JS, pero una si el nombre y apellidos es correcto,
+									muestra el alert de que efectivamente, los carácteres y nombre son válidos*/ 
+								}
+								if (validarPattern.reportValidity()) {
+									alert('Nombre válido,' + nombre)
+								}
+								else {
+									alert('Nombre inválido,' + nombre)
+									console.log('Nombre inválido,' + nombre);
+								}
+								
 								if (contraseña === repetirContraseña) {
 									const datos_enviados = {
 										nombre: this.Nombre_Y_Apellidos.value.trim(),
@@ -251,7 +271,7 @@
 
 									return;
 								}
-
+								
 								document.getElementById('bs-msg-ej5').innerHTML = '<div class="alert alert-danger">Las contraseñas no son iguales</div>';
 							});
 						</script>
